@@ -68,7 +68,7 @@ LD		:= $(XTENSA_TOOLS_ROOT)/xtensa-lx106-elf-gcc
 ####
 #### no user configurable options below here
 ####
-FW_TOOL		?= /usr/bin/esptool
+FW_TOOL		?= esptool
 SRC_DIR		:= $(MODULES)
 BUILD_DIR	:= $(addprefix $(BUILD_BASE)/,$(MODULES))
 
