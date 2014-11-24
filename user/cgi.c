@@ -34,7 +34,7 @@ int ICACHE_FLASH_ATTR cgiLed(HttpdConnData *connData) {
 		return HTTPD_CGI_DONE;
 	}
 
-	len=httpdFindArg(connData->postBuff, "led", buff, sizeof(buff));
+	len=httpdFindArg(connData->getArgs, "led", buff, sizeof(buff));
 	if (len!=0) {
 		currLedState=atoi(buff);
 		ioLed(currLedState);
